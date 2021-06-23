@@ -28,6 +28,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 
 const BASE_URL = '/api';
+const DATA_LOCATION = __dirname + '/data/sample_data.json';
 const PORT_NUMBER = 3001;
 const app = express();
 
@@ -78,7 +79,7 @@ const getData = () => {
     };
 
     return new Promise((resolve, reject) => {
-        fs.readFile(__dirname + '/data/sample_data.json', 'utf8', (err, data) => {
+        fs.readFile(DATA_LOCATION, 'utf8', (err, data) => {
             if (err) return reject(err);
 
             if (data) {
