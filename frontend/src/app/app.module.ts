@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LineGraphComponent } from './components/line-graph/line-graph.component';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import { GraphsComponent } from './components/graphs/graphs.component';
 import { TableComponent } from './components/table/table.component';
 
@@ -15,7 +16,8 @@ import { ChartsModule } from 'ng2-charts';
     AppComponent,
     LineGraphComponent,
     GraphsComponent,
-    TableComponent
+    TableComponent,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
