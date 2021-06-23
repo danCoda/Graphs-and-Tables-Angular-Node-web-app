@@ -1,3 +1,21 @@
 <div>
     <h1>Line graph</h1>
+
+    <div class="chart-wrapper">
+        <canvas baseChart 
+            [datasets]="lineChartData" 
+            [labels]="lineChartLabels" 
+            [options]="lineChartOptions"
+            [colors]="lineChartColors" 
+            [legend]="lineChartLegend" 
+            [chartType]="lineChartType" 
+            [plugins]="lineChartPlugins">
+        </canvas>
+    </div>
+
+    
+    <div *ngFor="let product of myData">
+        <div>{{ product }} </div>
+    </div>
+
 </div>

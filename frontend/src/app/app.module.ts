@@ -8,6 +8,7 @@ import { GraphsComponent } from './components/graphs/graphs.component';
 import { TableComponent } from './components/table/table.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule,
   ],
   bootstrap: [AppComponent]
 })
