@@ -33,7 +33,7 @@ export class PieChartComponent implements OnInit {
       if (dataIndex === -1) {
         this.sortedData.push({ category: d.category, totalSales: 0 });
       } else {
-        this.sortedData[dataIndex].totalSales += d.total_qty;
+        this.sortedData[dataIndex].totalSales += d.total_amount;
       }
     });
 

@@ -10,6 +10,7 @@ import { TableComponent } from './components/table/table.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ChartsModule } from 'ng2-charts';
+import { BarGraphComponent } from './components/bar-graph/bar-graph.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChartsModule } from 'ng2-charts';
     LineGraphComponent,
     GraphsComponent,
     TableComponent,
-    PieChartComponent
+    PieChartComponent,
+    BarGraphComponent
   ],
   imports: [
     BrowserModule,

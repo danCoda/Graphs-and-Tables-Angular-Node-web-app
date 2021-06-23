@@ -1,12 +1,12 @@
 <p>pie-chart works!</p>
 
-<div class="chart">
-    <canvas baseChart *ngIf="isDataLoaded"
+<div class="chart" *ngIf="isDataLoaded">
+    <canvas baseChart 
         [data]="pieChartData"
-      [labels]="pieChartLabels"
-      [chartType]="pieChartType"
-      [options]="pieChartOptions"
-      [plugins]="pieChartPlugins"
-      [legend]="pieChartLegend">
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        [options]="pieChartOptions"
+        [plugins]="pieChartPlugins"
+        [legend]="pieChartLegend">
     </canvas>
 </div>
