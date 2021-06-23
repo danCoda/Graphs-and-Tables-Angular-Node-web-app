@@ -7,6 +7,8 @@ import { LineGraphComponent } from './components/line-graph/line-graph.component
 import { GraphsComponent } from './components/graphs/graphs.component';
 import { TableComponent } from './components/table/table.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +18,9 @@ import { TableComponent } from './components/table/table.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
