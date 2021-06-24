@@ -1,6 +1,6 @@
 <div>
     <h3>Quantities of stock</h3>
-    <div class="chart" *ngIf="isDataLoaded">
+    <div class="chart" *ngIf="isDataReady">
         <canvas baseChart 
             [datasets]="barChartData"
             [labels]="barChartLabels"

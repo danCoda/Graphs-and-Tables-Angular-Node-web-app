@@ -10,9 +10,9 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./pie-chart.component.scss'],
 })
 export class PieChartComponent implements OnInit {
-  showGraph = false;
   sortedData = []; // Contains objects of { category: ... totalSales: ... }
-  
+  isDataReady = false;
+
   // Graph parameters:
   pieChartLabels: Label[];
   pieChartData: SingleDataSet;
@@ -22,7 +22,7 @@ export class PieChartComponent implements OnInit {
   pieChartType: ChartType = 'pie';
   pieChartLegend = true;
   pieChartPlugins = [];
-  
+
   constructor(private dataService: DataService) {}
 
   setGraphParameters = () => {
@@ -34,7 +34,7 @@ export class PieChartComponent implements OnInit {
     this.dataService.getData().subscribe((data) => {
       this.sortedData = this.dataService.getDataForGraph('pie');
       this.setGraphParameters();
-      this.showGraph = true;
+      this.isDataReady = true;
     });
   }
 }

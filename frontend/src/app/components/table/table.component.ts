@@ -11,11 +11,11 @@ import { __core_private_testing_placeholder__ } from '@angular/core/testing';
 export class TableComponent implements OnInit {
   rows = [];
   columns = [];
+  isDataReady = false;
+  data;
 
   constructor(private dataService: DataService) {}
 
-  isDataLoaded = false;
-  data;
 
   sortData = () => {
     // Order data by total_amount, descending.
@@ -41,7 +41,7 @@ export class TableComponent implements OnInit {
       this.data = data;
       this.sortData();
       this.setTableParameters();
-      this.isDataLoaded = true;
+      this.isDataReady = true;
     });
   }
 }
