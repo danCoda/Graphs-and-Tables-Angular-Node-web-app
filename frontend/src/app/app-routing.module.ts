@@ -4,8 +4,8 @@ import { GraphsComponent } from './components/graphs/graphs.component';
 import { TableComponent } from './components/table/table.component';
 
 const routes: Routes = [
-  { path: '', component: GraphsComponent },
   { path: 'home', component: GraphsComponent },
+  { path: '', redirectTo:'home', pathMatch:'full' },
   { path: 'sales-analysis', component: TableComponent },
 ];
 
