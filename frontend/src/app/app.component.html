@@ -1,10 +1,31 @@
 <div>
   <h1>Streamline - NodeJS and Angular Assignment</h1>
-  <nav>
-    <ul>
-      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-      <li><a routerLink="/sales-analysis" routerLinkActive="active">Sales Analysis</a></li>
-    </ul>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/home" routerLinkActive="active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/sales-analysis" routerLinkActive="active">Sales Analysis</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
+
   <router-outlet></router-outlet>
+  
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Sticky footer...</span>
+    </div>
+  </footer>
+
 </div>
