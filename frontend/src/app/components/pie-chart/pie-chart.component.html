@@ -1,6 +1,6 @@
 <div>
     <h3>Total sales categories (%)</h3>
-    <div class="chart" *ngIf="isDataLoaded">
+    <div class="chart" *ngIf="showGraph">
         <canvas baseChart 
             [data]="pieChartData"
             [labels]="pieChartLabels"
