@@ -1,1 +1,9 @@
-<p>table works!</p>
+<div class="col-12">
+    <ngx-datatable 
+        *ngIf="isDataLoaded" 
+        class="material"
+        [rows]="rows" 
+        [columns]="columns"
+        [limit]="100"    
+    > </ngx-datatable>
+</div>

@@ -1,11 +1,13 @@
-<div class="chart" *ngIf="isDataLoaded">
-    <canvas baseChart 
-        [datasets]="barChartData"
-        [labels]="barChartLabels"
-        [options]="barChartOptions"
-        [plugins]="barChartPlugins"
-        [legend]="barChartLegend"
-        [chartType]="barChartType">
-    </canvas>
+<div>
+    <h3>Quantities of stock</h3>
+    <div class="chart" *ngIf="isDataLoaded">
+        <canvas baseChart 
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+        </canvas>
+    </div>
 </div>
-

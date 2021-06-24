@@ -1,12 +1,13 @@
-<p>pie-chart works!</p>
-
-<div class="chart" *ngIf="isDataLoaded">
-    <canvas baseChart 
-        [data]="pieChartData"
-        [labels]="pieChartLabels"
-        [chartType]="pieChartType"
-        [options]="pieChartOptions"
-        [plugins]="pieChartPlugins"
-        [legend]="pieChartLegend">
-    </canvas>
+<div>
+    <h3>Total sales categories (%)</h3>
+    <div class="chart" *ngIf="isDataLoaded">
+        <canvas baseChart 
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            [options]="pieChartOptions"
+            [plugins]="pieChartPlugins"
+            [legend]="pieChartLegend">
+        </canvas>
+    </div>
 </div>

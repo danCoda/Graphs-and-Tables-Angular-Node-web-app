@@ -15,19 +15,10 @@ export class PieChartComponent implements OnInit {
   sortedData = []; // Contains objects of { category: ... totalSales: ... }
   pieChartLabels: Label[]; //= this.sortedData.map(d => d.category);
 
-  
-  /* pieChartLabels: Label[] = [
-    ['Download', 'Sales'],
-    ['In', 'Store', 'Sales'],
-    'Mail Sales',
-  ]; */
-
-  pieChartData: SingleDataSet ; //= this.sortedData.map(d => d.totalSales);
-  //pieChartData: SingleDataSet = [300, 500, 100];
+  pieChartData: SingleDataSet;
   constructor(private dataService: DataService) {}
 
   sortData = () => {
-
     this.myData.forEach((d) => {
       const dataIndex = this.sortedData.findIndex(s => s.category === d.category);
       if (dataIndex === -1) {
@@ -37,8 +28,11 @@ export class PieChartComponent implements OnInit {
       }
     });
 
-    console.log( this.sortedData.map(d => d.category));
-    console.log( this.sortedData.map(d => d.totalSales));
+    let totalSales = this.sortedData.reduce((total, d) => total + Number(d.totalSales), 0);
+
+    this.sortedData.forEach((d, i) => {
+      this.sortedData[i].totalSales = `${(d.totalSales / totalSales * 100).toFixed(2)}`;
+    });
   };
 
   setGraphParameters = () => {
@@ -54,7 +48,6 @@ export class PieChartComponent implements OnInit {
       this.isDataLoaded = true;
     });
   }
-
   
   // Pie
   pieChartOptions: ChartOptions = {
